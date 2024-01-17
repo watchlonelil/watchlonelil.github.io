@@ -7,7 +7,7 @@ export default function AntiTamper() {
     <main className="h-screen w-screen bg-[#CD1932] p-8">
       <Separator className="bg-white" />
       <div className="apy-16 flex h-full w-full flex-col items-center justify-center gap-8">
-        <img src={projector} className="" width={150} height={150} alt="Logo" />
+        <img src={projector} width={150} height={150} alt="Logo" />
         <h1 className="text-center text-4xl font-bold uppercase">
           Tampering Detected
         </h1>

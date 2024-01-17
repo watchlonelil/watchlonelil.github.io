@@ -17,8 +17,8 @@ const tmdb = ["https://api.themoviedb.org/3/movie/1160164"];
 
 function App() {
   return (
-    <main className="container flex h-screen flex-col items-center gap-4 py-16">
-      <img src={projector} className="" width={150} height={150} alt="Logo" />
+    <main className="container flex h-screen flex-col items-center justify-center gap-4 py-16">
+      <img src={projector} width={150} height={150} alt="Logo" />
       <h1 className="text-center text-3xl font-bold">
         watch.lonelil.com Troubleshooter
       </h1>
