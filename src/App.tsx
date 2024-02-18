@@ -77,11 +77,12 @@ function App() {
                     variant={"secondary"}
                     onClick={() => {
                       toast.promise(
-                        fetch(url + `?nocache=${Date.now()}`, {
+                        fetch(url, {
                           headers: {
                             Authorization:
                               "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNzIzYmFiNjEyZGQ2ODE0ZGU5N2NhNTM3NjliOGZmMiIsInN1YiI6IjY1MTVlYjBkY2FkYjZiMDJiZjAxMWZiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8m-XSM_5y3xP3UwfhDD_kmM54SU5NW0c9Oe_j_BZhdQ",
                           },
+                          cache: "no-cache",
                         }),
                         {
                           loading: `Checking connection to ${hostname}...`,
@@ -100,6 +101,31 @@ function App() {
               </>
             );
           })}
+        </CardContent>
+      </Card>
+
+      <Card className="w-full max-w-md">
+        <CardContent className="flex flex-row items-center justify-between gap-4 pt-6">
+          <div>
+            <CardTitle className="text-left">Authentication Server</CardTitle>
+            <CardDescription className="mt-1.5">
+              Check your connection to our authentication server.
+            </CardDescription>
+          </div>
+          <Button
+            variant={"secondary"}
+            onClick={() => {
+              toast.promise(fetch("https://backend.movie-web.app/meta"), {
+                loading: `Checking connection to authentication server...`,
+                success: () => {
+                  return `Connected to authentication server successfully.`;
+                },
+                error: `Failed to connect to authentication server.`,
+              });
+            }}
+          >
+            Check
+          </Button>
         </CardContent>
       </Card>
     </main>
