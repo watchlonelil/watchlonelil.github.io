@@ -12,7 +12,7 @@ import { Separator } from "./components/ui/separator";
 
 import { toast } from "sonner";
 
-const domains = ["watch.lonelil.to", "watch.lonelil.com", "12131989.xyz"];
+const domains = ["watch.lonelil.ru", "watch.lonelil.com", "12131989.xyz"];
 const tmdb = ["https://api.themoviedb.org/3/movie/1160164"];
 
 function App() {
